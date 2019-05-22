@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: env
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: rails
+    spec:
+      containers:
+      - name: railsapp
+        image: nadamohamed2222/env:v1
+        env:
+        - name: NAME
+          value: nnnnnnnnnnnnnnnn
+        ports:
+        - containerPort: 3000
+
