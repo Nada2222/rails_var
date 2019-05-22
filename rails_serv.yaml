@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: rails-servicee
+spec:
+  selector:
+    app: rails
+  type: NodePort
+  #type: LoadBalancer
+  ports:
+  - name: http
+    protocol: TCP
+    nodePort: 31317
+    targetPort: 3000
+    port: 3000
+  
