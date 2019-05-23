@@ -11,10 +11,15 @@ spec:
     spec:
       containers:
       - name: railsapp
-        image: nadamohamed2222/env:v1
+        image: nadamohamed2222/passwd:v1
         env:
         - name: NAME
-          value: nnnnnnnnnnnnnnnn
+          value: vvvvvvvvv
+        - name: PASSWORD
+          valueFrom: 
+            secretKeyRef:
+              name: password
+              key: PASSWORD
         ports:
         - containerPort: 3000
 
