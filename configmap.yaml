@@ -4,5 +4,4 @@ metadata:
   name: config
   namespace: devops
 data:
-  pass.key: PASSWORD
-  pass.value: mypasswd
+  PASSWORD: mypasswd
